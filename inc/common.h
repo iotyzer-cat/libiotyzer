@@ -10,6 +10,8 @@
 #define IOTZ_ENABLE     1
 #define IOTZ_DISABLE    0
 
+#define IOTZ_NONE       0
+
 
 typedef void            IOTZ_VOID;
 typedef char            IOTZ_CHAR;

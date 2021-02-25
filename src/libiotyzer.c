@@ -43,17 +43,35 @@ IOTZ_RETURN iotyzer_target_terminate()
     return IOTZ_OK;
 }
 
-IOTZ_RETURN query_blockcipher_modes(
-    IOTZ_UBYTE* out,                                // Byte array(Ciphertext)
-    IOTZ_INT* outLen,                               // Length is byte length
-    const IOTZ_UBYTE* in,                           // Byte array(Plaintext)
-    const IOTZ_INT inLen,                           // Length is byte length
-    const IOTZ_UBYTE* iv,                           // Byte array(IV or Nonce, Counter for CBC, OFB, CTR, if not, NULL)
-    const IOTZ_INT ivLen,                           // Length is byte length
-    const IOTZ_UBYTE* key,                          // Byte array(Key)
-    const IOTZ_INT keyLen,                          // Length is bit length, ex) 128, 192, 256
-    const IOTZ_BLOCK_CIPHER_MODE_OPERATION mode,    // ECB, CBC, OFB, CTR
-    const IOTZ_BLOCK_CIPHER_ALG alg                 // ARIA, SEED, LEA
+IOTZ_RETURN query_blockcipher(
+    IOTZ_UBYTE* out,            // Byte array(Ciphertext)
+    IOTZ_INT* outLen,           // Length is byte length
+    const IOTZ_UBYTE* in,       // Byte array(Plaintext)
+    const IOTZ_INT inLen,       // Length is byte length
+    const IOTZ_UBYTE* iv,       // Byte array(IV or Nonce, Counter for CBC, OFB, CTR, if not, NULL)
+    const IOTZ_INT ivLen,       // Length is byte length
+    const IOTZ_UBYTE* key,      // Byte array(Key)
+    const IOTZ_INT keyLen,      // Length is bit length, ex) 128, 192, 256
+    const IOTZ_BC_MODE mode,    // ECB, CBC, OFB, CTR
+    const IOTZ_BC_ALG alg       // ARIA, SEED, LEA
+)
+{
+    // Call block cipher modes function
+    
+    return IOTZ_OK;
+}
+
+IOTZ_RETURN query_secure_hash(
+    IOTZ_UBYTE* hash,           // Byte array(Message Digest)
+    const IOTZ_INT hashLen,     // Length is byte length ex) SHA2-224 : 28, only support full hash size, not truncated.
+    const IOTZ_UBYTE* in,       // Byte array(Plaintext)
+    const IOTZ_INT inLen,       // Length is byte length
+    const IOTZ_BC_ALG alg       // use define.h "IOTZ_HASH_ALG" variables, combinate hashLen variable.
+                                // IOTZ_SHA2 : SHA2(224/256/384/512)
+                                // IOTZ_SHA3 : SHA3(224/256/384/512)
+                                // IOTZ_LSH256 : LSH(LSH256-224/LSH256-256)
+                                // IOTZ_LSH512 : LSH(LSH512-224/LSH512-256/LSH512-384/LSH512-512)
+                                // ex) SHA2-224 : hashLen(28), alg(IOTZ_SHA2)
 )
 {
     // Call block cipher modes function

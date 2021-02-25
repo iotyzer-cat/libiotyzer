@@ -143,13 +143,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\aria.c" />
+    <ClCompile Include="src\casting.c" />
+    <ClCompile Include="src\lea.c" />
     <ClCompile Include="src\libiotyzer.c" />
+    <ClCompile Include="src\mode_of_operate.c" />
+    <ClCompile Include="src\seed.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="inc\aria.h" />
+    <ClInclude Include="inc\casting.h" />
     <ClInclude Include="inc\common.h" />
     <ClInclude Include="inc\define.h" />
+    <ClInclude Include="inc\lea.h" />
     <ClInclude Include="inc\libiotyzer.h" />
+    <ClInclude Include="inc\mode_of_operate.h" />
     <ClInclude Include="inc\return.h" />
+    <ClInclude Include="inc\seed.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
