@@ -22,7 +22,7 @@
 
 IOTZ_DL_EXTERN IOTZ_RETURN iotyzer_target_init();
 IOTZ_DL_EXTERN IOTZ_RETURN iotyzer_target_terminate();
-IOTZ_RETURN query_blockcipher(
+IOTZ_DL_EXTERN IOTZ_RETURN query_blockcipher(
 	IOTZ_UBYTE* out,                    // Byte array(Ciphertext)
 	IOTZ_INT* outLen,                   // Length is byte length
 	const IOTZ_UBYTE* in,               // Byte array(Plaintext)
@@ -43,7 +43,7 @@ IOTZ_RETURN query_blockcipher(
     const IOTZ_BC_ENC_DEC oper          // Encryt(IOTZ_ENC), Decrypt(IOTZ_DEC)
 );
 
-IOTZ_RETURN query_secure_hash(
+IOTZ_DL_EXTERN IOTZ_RETURN query_secure_hash(
     IOTZ_UBYTE* hash,                   // Byte array(Message Digest)
     const IOTZ_INT hashLen,             // Length is bit length ex) SHA2-224 : 224
                                         // only support full hash size, not suport truncated size.
@@ -57,7 +57,21 @@ IOTZ_RETURN query_secure_hash(
                                         // ex) SHA2-224 : hashLen(28), alg(IOTZ_SHA2)
 );
 
-IOTZ_RETURN query_message_authentication(
+IOTZ_DL_EXTERN IOTZ_RETURN query_secure_hash(
+    IOTZ_UBYTE* hash,                   // Byte array(Message Digest)
+    const IOTZ_INT hashLen,             // Length is bit length ex) SHA2-224 : 224
+                                        // only support full hash size, not suport truncated size.
+    const IOTZ_UBYTE* in,               // Byte array(Plaintext)
+    const IOTZ_INT inLen,               // Length is byte length
+    const IOTZ_BC_ALG alg               // use define.h "IOTZ_HASH_ALG" variables, combinate hashLen variable.
+                                        // IOTZ_SHA2 : SHA2(224/256/384/512)
+                                        // IOTZ_SHA3 : SHA3(224/256/384/512)
+                                        // IOTZ_LSH256 : LSH(LSH256-224/LSH256-256)
+                                        // IOTZ_LSH512 : LSH(LSH512-224/LSH512-256/LSH512-384/LSH512-512)
+                                        // ex) SHA2-224 : hashLen(28), alg(IOTZ_SHA2)
+);
+
+IOTZ_DL_EXTERN IOTZ_RETURN query_message_authentication(
 	IOTZ_UBYTE* out,                    // Byte array(Ciphertext), only for CCM, GCM not HMAC, CMAC
 	IOTZ_INT* outLen,                   // Length is byte length
 	IOTZ_UBYTE* tag,                    // Byte array(Message Authentication Code)
