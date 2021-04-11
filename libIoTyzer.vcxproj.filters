@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\casting.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="src\libiotyzer.c">
       <Filter>소스 파일</Filter>
     </ClCompile>

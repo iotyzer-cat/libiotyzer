@@ -143,7 +143,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\casting.c" />
     <ClCompile Include="src\libiotyzer.c" />
   </ItemGroup>
   <ItemGroup>
