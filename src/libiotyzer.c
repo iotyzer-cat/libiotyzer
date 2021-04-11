@@ -51,7 +51,7 @@ IOTZ_RETURN query_blockcipher(
 	const IOTZ_UBYTE* iv,               // Byte array(IV or Nonce for CBC, CTR, OFB, if not NULL)
 	const IOTZ_INT ivLen,               // Length is byte length
 	const IOTZ_UBYTE* key,              // Byte array(Key)
-	const IOTZ_INT keyLen,              // Length is bit length, ex) 128, 192, 256
+	const IOTZ_INT keyLen,              // Length is byte length(16/24/32)
 	const IOTZ_BC_MODE mode,            // use define.h "IOTZ_BC_MODE" variables
                                         // IOTZ_ECB : ECB
                                         // IOTZ_CBC : CBC
