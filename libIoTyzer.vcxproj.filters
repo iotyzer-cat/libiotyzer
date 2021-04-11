@@ -15,51 +15,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\aria.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="src\casting.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="src\lea.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="src\libiotyzer.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="src\mode_of_operate.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="src\seed.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="inc\aria.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="inc\casting.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="inc\common.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="inc\define.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="inc\lea.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="inc\libiotyzer.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="inc\mode_of_operate.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="inc\return.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="inc\seed.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
